@@ -1,3 +1,12 @@
+--[[
+Project: PerformanceWatch
+Author: Caleb P of Gymbyl Coding
+
+PerformanceWatch is a widget library that creates a slick, customizable tracker of FPS and system memory.
+
+www.gymbyl.com
+--]]
+
 local performanceWatch={}
 
 function performanceWatch.new()
