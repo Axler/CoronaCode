@@ -29,7 +29,7 @@ local type					= type
 local function toV(value) local v if type(v)=="string" then if value=="true" or value=="false" then if value=="true" then v=true else v=false end elseif value:match("[+-]?%d+%.?[%d]+")==value then v=tonumber(value) elseif value:match("^!json!") then v=json.decode(value:sub(7)) else if value:sub(1,1)=="\"" and value:sub(-1)=="\"" then v=value:sub(2, -2) else v=value end end else v=value end return v end
 local function toK(key) if key:match("[-+]?%d+%.?%d+") then return tonumber(key) else if key:match("^\".+\"$") then key=key:sub(2, -2) end return key end end
 
-local k="[%w_]+" -- Pattern to match names with
+local k="[%w_-+]+" -- Pattern to match names with
 
 --------------------------------------------------------------------------------
 -- Main Function
