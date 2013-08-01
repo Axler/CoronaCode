@@ -74,6 +74,9 @@ function magma.new(t)
 	end
 	
 	local title=newTitle()
+	while cache[title] do
+		title=newTitle()
+	end
 	
 	obj._cacheID=title
 	
